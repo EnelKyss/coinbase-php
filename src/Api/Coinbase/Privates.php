@@ -12,7 +12,7 @@ class Privates extends Request
     
     public function sendMoney(array $data=[]){
         $this->type='POST';
-        $this->path='v2/accounts/'.$data['account_id'].'/transactions';
+        $this->path='/v2/accounts/'.$data['account_id'].'/transactions';
         $this->data=$data;
         return $this->exec();
     }
